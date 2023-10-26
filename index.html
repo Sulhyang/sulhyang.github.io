@@ -1,77 +1,406 @@
----
-layout: default
-overtitle: Made is a Jekyll theme
-title: For designers and web developers
-description: Show off your best work with this beautiful, minimal and customizable portfolio theme.
-featured_image: /images/social.jpg
----
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>서브타이틀 | 프로젝트 이름</title>
+    <meta
+      name="description"
+      content="네이버 메인에서 다양한 정보와 유용한 컨텐츠를 만나 보세요"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="페이지 제목" />
+    <meta property="og:description" content="페이지 설명" />
+    <meta
+      property="og:image"
+      content="http://www.mysite.com/article/article1_featured_image.jpg"
+    />
+    <meta
+      property="og:url"
+      content="http://www.mysite.com/article/article1.html"
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="페이지 제목" />
+    <meta name="twitter:description" content="페이지 설명" />
+    <meta
+      name="twitter:image"
+      content="http://www.mysite.com/article/article1.html"
+    />
+    <meta name="twitter:domain" content="사이트 명" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./dist/css/comm.css" />
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="./dist/js/comm.js"></script>
+  </head>
+  <body>
+    <!-- 
+      http://www.seulki.net/#about
+  포폴-https://codepen.io/LKhadka/pen/KzXowr
+스타일참고 = https://www.gdweb.co.kr/
+1. https://www.hansoldeco.co.kr/
+컨셉사이트 = https://www.mirage.co.kr/
+스크롤트리거 추가할것들.
+1.https://codepen.io/PointC/pen/ZErvbPR (제품 전/후 비교에 사용)
+2.https://codepen.io/kevinpowell/pen/GRZYXmg (기본틀1)
+3.https://codepen.io/creativeocean/pen/dyOxxGb (제품설명+옆에쓸사진 스크롤트리거로꾸밈)
 
-<div class="page-home">
 
-	{% if site.data.settings.hero_settings.background_image %}
-	<img src="{{ site.data.settings.hero_settings.background_image | relative_url }}" class="hero__background" draggable="false">
-	{% endif %}
 
-	<section class="hero">
-		<div class="wrap grid">
-			<div class="title">
-				<p class="subtitle">{{ page.overtitle }}</p>
-				<h1>{{ page.title }}</h1>
-			</div>
+ -->
+    <div id="u-skip">
+      <a href="#gnb"><span>주요메뉴 바로가기</span></a>
+      <a href="#main"><span>컨텐츠 바로가기</span></a>
+      <a href="#footer"><span>풋터 바로가기</span></a>
+    </div>
+    <header>
+      <nav class="gnb">
+        <div class="gnb-wrap">
+          <h1 class="logo">
+            <a href="https://github.com/Sulhyang"
+              ><img src="./dist/img/bnr1.png" alt="github" />
+            </a>
+          </h1>
 
-			<p class="intro subtitle--light">
-				{{ page.description }}
-				<a href="#" class="hero__cta button--fill contact-trigger js-contact">Get In Touch</a>
-			</p>
-		</div>
-	</section>
+          <ul class="goto">
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#panels">Portfolio</a>
+            </li>
+            <li>
+              <a href="#skill">skill</a>
+            </li>
+            <li>
+              <a href="#">email</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-	<section class="listing">
-		<div class="wrap">
+    <div id="page" class="site">
+      <div id="feather" class="feather"></div>
 
-			{% for project in site.projects reversed %}
+      <div class="wrap">
+        <main id="content" class="site-content sec-main" role="main">
+          <section id="intro" class="full-screen pt-5 blue">
+            <h1 class="blind">Mirage</h1>
 
-			{% if project.accent_color %}{% capture accent_color %}{{ project.accent_color }}{% endcapture %}{% endif %}
+            <div class="intro-silde">
+              <section class="container hero">
+                <div class="hero__inner">
+                  <img src="./dist/img/intro.jpg" alt="#" class="hero__image" />
+                  <div class="hero__content">
+                    <div class="hero__headline">
+                      <span>Web Publisher / 이성재</span>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </section>
 
-			<article class="project__preview">
-				<h3 class="project__title"><a href="{{ project.url | relative_url }}" style="--accent: {{ accent_color }}">{{ project.title }}</a></h3>
+          <section id="panels">
+            <!-- article width값 1개씩늘어날때마다 75%추가 -->
+            <div id="panels-container" style="width: 150%">
+              <article id="panel-1" class="panel full-screen red">
+                <div class="container">
+                  <div class="row"></div>
+                  <div class="col-6 d-flex flex-column port-txt">
+                    <div class="port-txt-wrap">
+                      <p class="port-type">
+                        RESPONSIVE WEBSITE [PC, Tablet, Mobile]
+                      </p>
+                      <strong class="port-tit">김해천문대</strong>
+                      <span class="port-cont">사용 스킬</span>
+                      <p class="port-item port-item-first">
+                        HTML, CSS, Swiper, javascript, Gnuboard5
+                      </p>
 
-				<div class="project__images owl-carousel" style="--accent: {{ accent_color }}">
-					{% for image in project.gallery_images %}
-					<a href="{{ project.url | relative_url }}"><img src="{{ '/images/projects/' | relative_url}}{{ image }}" alt="" class="project__image"></a>
-					{% endfor %}
-				</div>
+                      <span class="port-cont">기여도</span>
+                      <p class="port-item port-item-last">
+                        개인작업(기여도100%)
+                      </p>
 
-				<div class="project__content grid" style="border-color: {{ accent_color }}">
-					<p class="project__subtitle subtitle--light">{{ project.subtitle }}</p>
-					<p class="project__description --small">
-						{{ project.description }}
-						<a href="{{ project.url | relative_url }}" class="project__link button--text --right"
-							style="color: {{ accent_color }}; --color-var: {{ accent_color }}">View Case Study</a>
-					</p>
-				</div>
-			</article>
+                      <p class="port-exp">
+                        기존 김해천문대의 사이트를 리뉴얼 하여 <br />
+                        gnuboard5 로 실제 사이트처럼 실용적으로 <br />
+                        코딩및 재디자인 하여 제작한 사이트 입니다.
+                      </p>
 
-			{% endfor %}
-		</div>
-	</section>
+                      <a
+                        href="https://belluna1.cafe24.com/gnuboard5/"
+                        class="port-goto"
+                        >사이트 이동</a
+                      >
+                    </div>
+                  </div>
+                  <div class="col-6 port-img">
+                    <a href="#">
+                      <img
+                        src="./dist/img/port1s.png"
+                        alt="3123"
+                        class="port1"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </article>
 
-	{% include section__about.html %}
+              <article id="panel-2" class="panel full-screen red">
+                <div class="container">
+                  <div class="row"></div>
+                  <div class="col-6 d-flex flex-column port-txt">
+                    <div class="port-txt-wrap">
+                      <p class="port-type">RESPONSIVE WEBSITE [Mobile]</p>
+                      <strong class="port-tit">Lazuli</strong>
+                      <span class="port-cont">사용 스킬</span>
+                      <p class="port-item port-item-first">
+                        HTML, CSS, Swiper, javascript
+                      </p>
 
-	<section class="recent-posts">
-		<div class="wrap grid">
-			<header class="recent-posts__header">
-				<h4>Recent blog posts</h4>
-				<a href="{{ '/blog' | relative_url }}" class="action button--text--accent --right">All Posts</a>
-			</header>
+                      <span class="port-cont">기여도</span>
+                      <p class="port-item port-item-last">
+                        팀작업(기여도 코딩-40%, 디자인-20%) <br />
+                        작업목록 - header,main,sub1,sub2
+                      </p>
 
-			<div class="recent-posts__list grid">
-				{% for post in site.posts limit: 3 %}
-				{% include component__post-preview.html %}
-				{% endfor %}
-			</div>
+                      <p class="port-exp">
+                        외국사이트를 한국사이트를참고하여 친화적으로보이게
+                        <br />
+                        Figma에서 디자인한후 역할분담을하고 개인제작 해서 <br />
+                        github에서 합쳐 완성을한 사이트입니다.
+                      </p>
 
-			<a href="{{ '/blog' | relative_url }}" class="action-bottom button--text--accent --right">All Posts</a>
-		</div>
-	</section>
-</div>
+                      <a
+                        href="https://belluna1.cafe24.com/gnuboard5/"
+                        class="port-goto"
+                        >사이트 이동</a
+                      >
+                    </div>
+                  </div>
+                  <div class="col-6 port-img port-img-moblie">
+                    <a href="#">
+                      <img
+                        src="./dist/img/port2s.png"
+                        alt="3123"
+                        class="port2"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </article>
+              <!--               
+              <article id="panel-3" class="panel full-screen red">
+                <div class="container">
+                  <div class="row"></div>
+                  <div class="col-6 d-flex flex-column port-txt">
+                    <div class="port-txt-wrap">
+                      <p class="port-type">RESPONSIVE WEBSITE [PC, Mobile]</p>
+                      <strong class="port-tit">Lazuli</strong>
+                      <span class="port-cont">사용 스킬</span>
+                      <p class="port-item port-item-first">
+                        HTML, CSS, Swiper, javascript
+                      </p>
+
+                      <span class="port-cont">기여도</span>
+                      <p class="port-item port-item-last">
+                        팀작업(기여도 코딩-40%, 디자인-20%) <br />
+                        작업목록 - header,main,sub1,sub2
+                      </p>
+
+                      <p class="port-exp">
+                        Figma에서 디자인한후 역할분담을하여 개인제작후 <br />
+                        github에서 합쳐서완성을한 사이트입니다.
+                      </p>
+
+                      <a
+                        href="https://belluna1.cafe24.com/gnuboard5/"
+                        class="port-goto"
+                        >사이트 이동</a
+                      >
+                    </div>
+                  </div>
+                  <div class="col-6 port-img">
+                    <a href="#">
+                      <img
+                        src="./dist/img/port1s.png"
+                        alt="3123"
+                        class="port1"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </article>
+              <article id="panel-4" class="panel full-screen red">
+                <div class="container">
+                  <div class="row"></div>
+                  <div class="col-6 d-flex flex-column port-txt">
+                    <div class="port-txt-wrap">
+                      <p class="port-type">RESPONSIVE WEBSITE [PC, Mobile]</p>
+                      <strong class="port-tit">Lazuli</strong>
+                      <span class="port-cont">사용 스킬</span>
+                      <p class="port-item port-item-first">
+                        HTML, CSS, Swiper, javascript
+                      </p>
+
+                      <span class="port-cont">기여도</span>
+                      <p class="port-item port-item-last">
+                        팀작업(기여도 코딩-40%, 디자인-20%) <br />
+                        작업목록 - header,main,sub1,sub2
+                      </p>
+
+                      <p class="port-exp">
+                        Figma에서 디자인한후 역할분담을하여 개인제작후 <br />
+                        github에서 합쳐서완성을한 사이트입니다.
+                      </p>
+
+                      <a
+                        href="https://belluna1.cafe24.com/gnuboard5/"
+                        class="port-goto"
+                        >사이트 이동</a
+                      >
+                    </div>
+                  </div>
+                  <div class="col-6 port-img">
+                    <a href="#">
+                      <img
+                        src="./dist/img/port1s.png"
+                        alt="3123"
+                        class="port1"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </article> -->
+            </div>
+          </section>
+
+          <div class="inner">
+            <section class="sec-g introduce" id="about">
+              <div class="introduce-tit">
+                <h2
+                  data-aos="fade-right"
+                  data-aos-duration="500"
+                  data-aos-easing="ease-out-cubic"
+                  class="aos-init aos-animate"
+                >
+                  About me
+                </h2>
+
+                <strong
+                  data-aos="fade-right"
+                  data-aos-duration="600"
+                  data-aos-easing="ease-out-cubic"
+                  data-aos-delay="300"
+                  class="aos-init aos-animate"
+                >
+                  저를 <span>소개합니다</span>
+                </strong>
+
+                <p
+                  data-aos="fade-right"
+                  data-aos-duration="600"
+                  data-aos-easing="ease-out-cubic"
+                  data-aos-delay="600"
+                  class="aos-init aos-animate"
+                >
+                  안녕하세요! 신입웹퍼블리셔 이성재입니다.
+                  <br />
+                </p>
+
+                <p
+                  data-aos="fade-right"
+                  data-aos-duration="600"
+                  data-aos-easing="ease-out-cubic"
+                  data-aos-delay="600"
+                  class="aos-init aos-animate"
+                >
+                  저는 2023.06.13 ~ 11.13 까지 <br />
+                  UI&UX 디자인, 프론트엔드 과정을 수료하였으며, <br />
+                  수료과정에서 Github를 이용한 팀프로젝트 작업을 <br />
+                  했습니다. 취업을해서도 이경험을 바탕으로 업무를 <br />
+                  잘수행해낼수있습니다.
+                </p>
+              </div>
+
+              <div class="introduce-img">
+                <a href="https://github.com/Sulhyang">
+                  <img
+                    src="./dist/img/bnr1.png"
+                    alt="github_bnr"
+                    data-aos="flip-right"
+                    data-aos-duration="400"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-delay="400"
+                    class="aos-init aos-animate"
+                  />
+                </a>
+              </div>
+            </section>
+
+            <section class="sec-g business-g sec-increase" id="skill">
+              <h2 class="blind">myskill</h2>
+              <div class="business-tit">
+                <p
+                  data-aos="fade-left"
+                  data-aos-duration="400"
+                  data-aos-easing="ease-out-cubic"
+                  data-aos-delay="300"
+                  data-aos-offset="400"
+                >
+                  My Skill
+                </p>
+                <strong
+                  data-aos="fade-left"
+                  data-aos-duration="500"
+                  data-aos-easing="ease-out-cubic"
+                  data-aos-delay="400"
+                  data-aos-offset="400"
+                  >사용가능 <span>스킬</span>목록</strong
+                >
+              </div>
+
+              <div class="business-item-g">
+                <div class="business-item-txt">
+                  <p class="item-txt">HTML, CSS, SCSS</p>
+                  <a href="#" class="business-link"
+                    ><p>javascript, Bootstrap, nodejs</p></a
+                  >
+
+                  <a href="#" class="business-link"
+                    ><p>Figma, Photoshop, Gnuboard5</p></a
+                  >
+                  <a href="#" class="business-link"
+                    ><p>Github, VScode, Jquery</p></a
+                  >
+                </div>
+
+                <div
+                  class="business-img"
+                  data-aos="fade-up"
+                  data-aos-duration="500"
+                  data-aos-easing="ease-out-cubic"
+                  data-aos-delay="500"
+                  class="aos-init aos-animate"
+                >
+                  <a href="#"><img src="./dist/img/bnr-1.jpg" alt="" /></a>
+                </div>
+              </div>
+            </section>
+
+            <section class="email" id="email"></section>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
