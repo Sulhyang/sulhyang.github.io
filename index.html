@@ -3,37 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" tag="이성재 포트폴리오" />
+    <meta name="description" tag="웹퍼블리셔 이성재의 포트폴리오입니다" />
+    <meta name="keywords" tag="웹퍼블리셔" />
+    <meta name="author" tag="이성재" />
     <title>Sulhyang</title>
-    <meta
-      name="description"
-      content="네이버 메인에서 다양한 정보와 유용한 컨텐츠를 만나 보세요"
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="페이지 제목" />
-    <meta property="og:description" content="페이지 설명" />
-    <meta
-      property="og:image"
-      content="http://www.mysite.com/article/article1_featured_image.jpg"
-    />
-    <meta
-      property="og:url"
-      content="http://www.mysite.com/article/article1.html"
-    />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="페이지 제목" />
-    <meta name="twitter:description" content="페이지 설명" />
-    <meta
-      name="twitter:image"
-      content="http://www.mysite.com/article/article1.html"
-    />
-    <meta name="twitter:domain" content="사이트 명" />
+    <!-- link -->
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./dist/css/comm.css" />
+    <!-- font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- scroll/script -->
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.14.2/matter.min.js"></script>
     <script defer src="./dist/js/comm.js"></script>
   </head>
   <body>
@@ -61,7 +52,7 @@
         <div class="gnb-wrap">
           <h1 class="logo">
             <a href="https://github.com/Sulhyang"
-              ><img src="./dist/img/bnr1.png" alt="github" />
+              ><img src="./images/bnr1.png" alt="github" />
             </a>
           </h1>
 
@@ -88,41 +79,52 @@
 
       <div class="wrap">
         <main id="content" class="site-content sec-main" role="main">
-          <section id="intro" class="full-screen pt-5 blue">
-            <h1 class="blind">Mirage</h1>
-
-            <div class="intro-silde">
-              <section class="container hero">
-                <div class="hero__inner">
-                  <img src="./dist/img/intro.jpg" alt="#" class="hero__image" />
-                  <div class="hero__content">
-                    <div class="hero__headline">
-                      <span>Web Publisher / 이성재</span>
-                    </div>
-                  </div>
-                </div>
-              </section>
+          <section id="intro">
+            <div class="lines-outside">
+              <svg width="280" height="280">
+                <line class="top" x1="470" y1="9" x2="280" y2="9" />
+                <line class="left" x1="8" y1="-190" x2="8" y2="0" />
+                <line class="right" x1="272" y1="280" x2="272" y2="470" />
+                <line class="bottom" x1="-180" y1="271" x2="0" y2="271" />
+              </svg>
+            </div>
+            <div class="first-box">
+              <h1 class="hello">hello.</h1>
+            </div>
+            <div class="about-me">
+              <h2 class="name">
+                Web <br />
+                Publisher <br />
+                이성재
+              </h2>
             </div>
           </section>
 
           <section id="panels">
             <!-- article width값 1개씩늘어날때마다 75%추가 -->
             <div id="panels-container" style="width: 150%">
-              <article id="panel-1" class="panel full-screen red">
+              <article id="panel-1" class="panel panel-g full-screen red">
                 <div class="container">
+                  <div class="col-6 port-img">
+                    <a href="https://belluna1.cafe24.com/gnuboard5/">
+                      <img src="./images/port1s.png" alt="3123" class="port1" />
+                    </a>
+                  </div>
                   <div class="row"></div>
                   <div class="col-6 d-flex flex-column port-txt">
-                    <div class="port-txt-wrap">
+                    <div class="port-head-about">
                       <p class="port-type">
                         RESPONSIVE WEBSITE [PC, Tablet, Mobile]
                       </p>
                       <strong class="port-tit">김해천문대</strong>
-                      <span class="port-cont">사용 스킬</span>
+                    </div>
+                    <div class="port-about">
+                      <span class="port-txt-tit">사용 스킬</span>
                       <p class="port-item port-item-first">
                         HTML, CSS, Swiper, javascript, Gnuboard5
                       </p>
 
-                      <span class="port-cont">기여도</span>
+                      <span class="port-txt-tit">기여도</span>
                       <p class="port-item port-item-last">
                         개인작업(기여도100%)
                       </p>
@@ -132,205 +134,68 @@
                         gnuboard5 로 실제 사이트처럼 실용적으로 <br />
                         코딩및 재디자인 하여 제작한 사이트 입니다.
                       </p>
-
-                      <a
-                        href="https://belluna1.cafe24.com/gnuboard5/"
-                        class="port-goto"
-                        >사이트 이동</a
-                      >
                     </div>
-                  </div>
-                  <div class="col-6 port-img">
-                    <a href="https://belluna1.cafe24.com/gnuboard5/">
-                      <img
-                        src="./dist/img/port1s.png"
-                        alt="3123"
-                        class="port1"
-                      />
-                    </a>
+
+                    <a
+                      href="https://belluna1.cafe24.com/gnuboard5/"
+                      class="port-goto"
+                      >사이트 이동</a
+                    >
                   </div>
                 </div>
               </article>
 
-              <article id="panel-2" class="panel full-screen red">
+              <article id="panel-2" class="panel panel-g full-screen red">
                 <div class="container">
-                  <div class="row"></div>
-                  <div class="col-6 d-flex flex-column port-txt">
-                    <div class="port-txt-wrap">
-                      <p class="port-type">RESPONSIVE WEBSITE [Mobile]</p>
-                      <strong class="port-tit">Lazuli</strong>
-                      <span class="port-cont">사용 스킬</span>
-                      <p class="port-item port-item-first">
-                        HTML, CSS, Swiper, javascript
-                      </p>
-
-                      <span class="port-cont">기여도</span>
-                      <p class="port-item port-item-last">
-                        팀작업(기여도 코딩-40%, 디자인-20%) <br />
-                        작업목록 - header,main,sub1,sub2
-                      </p>
-
-                      <p class="port-exp">
-                        외국사이트를 한국사이트를참고하여 친화적으로보이게
-                        <br />
-                        Figma에서 디자인한후 역할분담을하고 개인제작 해서 <br />
-                        github에서 합쳐 완성을한 사이트입니다.
-                      </p>
-
-                      <a href="https://sulhyang.me/lazuli" class="port-goto"
-                        >사이트 이동</a
-                      >
-                    </div>
-                  </div>
                   <div class="col-6 port-img port-img-moblie">
                     <a href="https://sulhyang.me/lazuli">
-                      <img
-                        src="./dist/img/port2s.png"
-                        alt="3123"
-                        class="port2"
-                      />
+                      <img src="./images/port2s.png" alt="3123" class="port2" />
                     </a>
                   </div>
-                </div>
-              </article>
-              <!--               
-              <article id="panel-3" class="panel full-screen red">
-                <div class="container">
                   <div class="row"></div>
                   <div class="col-6 d-flex flex-column port-txt">
-                    <div class="port-txt-wrap">
-                      <p class="port-type">RESPONSIVE WEBSITE [PC, Mobile]</p>
+                    <div class="port-head-about">
+                      <p class="port-type">RESPONSIVE WEBSITE [Mobile, Pc]</p>
                       <strong class="port-tit">Lazuli</strong>
-                      <span class="port-cont">사용 스킬</span>
+                    </div>
+                    <div class="port-about">
+                      <span class="port-txt-tit">사용 스킬</span>
                       <p class="port-item port-item-first">
                         HTML, CSS, Swiper, javascript
                       </p>
 
-                      <span class="port-cont">기여도</span>
+                      <span class="port-txt-tit">기여도</span>
                       <p class="port-item port-item-last">
                         팀작업(기여도 코딩-40%, 디자인-20%) <br />
-                        작업목록 - header,main,sub1,sub2
+                        작업목록 - header, main, wd-ring, visit
                       </p>
 
                       <p class="port-exp">
-                        Figma에서 디자인한후 역할분담을하여 개인제작후 <br />
-                        github에서 합쳐서완성을한 사이트입니다.
+                        해외 브랜드인 Harry Winston 사이트를 참조해
+                        <br />
+                        Figma에서 디자인 및 코딩을하여 github에서
+                        <br />
+                        마무리하여 가상의 브랜드인 Lazuli 를 대표하는
+                        <br />
+                        웹사이트로 재구성을 하였습니다.
                       </p>
-
-                      <a
-                        href="https://belluna1.cafe24.com/gnuboard5/"
-                        class="port-goto"
-                        >사이트 이동</a
-                      >
                     </div>
-                  </div>
-                  <div class="col-6 port-img">
-                    <a href="#">
-                      <img
-                        src="./dist/img/port1s.png"
-                        alt="3123"
-                        class="port1"
-                      />
-                    </a>
+
+                    <a href="https://sulhyang.me/lazuli" class="port-goto"
+                      >사이트 이동</a
+                    >
                   </div>
                 </div>
               </article>
-              <article id="panel-4" class="panel full-screen red">
-                <div class="container">
-                  <div class="row"></div>
-                  <div class="col-6 d-flex flex-column port-txt">
-                    <div class="port-txt-wrap">
-                      <p class="port-type">RESPONSIVE WEBSITE [PC, Mobile]</p>
-                      <strong class="port-tit">Lazuli</strong>
-                      <span class="port-cont">사용 스킬</span>
-                      <p class="port-item port-item-first">
-                        HTML, CSS, Swiper, javascript
-                      </p>
-
-                      <span class="port-cont">기여도</span>
-                      <p class="port-item port-item-last">
-                        팀작업(기여도 코딩-40%, 디자인-20%) <br />
-                        작업목록 - header,main,sub1,sub2
-                      </p>
-
-                      <p class="port-exp">
-                        Figma에서 디자인한후 역할분담을하여 개인제작후 <br />
-                        github에서 합쳐서완성을한 사이트입니다.
-                      </p>
-
-                      <a
-                        href="https://belluna1.cafe24.com/gnuboard5/"
-                        class="port-goto"
-                        >사이트 이동</a
-                      >
-                    </div>
-                  </div>
-                  <div class="col-6 port-img">
-                    <a href="#">
-                      <img
-                        src="./dist/img/port1s.png"
-                        alt="3123"
-                        class="port1"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </article> -->
             </div>
           </section>
 
           <div class="inner">
-            <section class="sec-g introduce" id="about">
-              <div class="introduce-tit">
-                <h2
-                  data-aos="fade-right"
-                  data-aos-duration="500"
-                  data-aos-easing="ease-out-cubic"
-                  class="aos-init aos-animate"
-                >
-                  About me
-                </h2>
-
-                <strong
-                  data-aos="fade-right"
-                  data-aos-duration="600"
-                  data-aos-easing="ease-out-cubic"
-                  data-aos-delay="300"
-                  class="aos-init aos-animate"
-                >
-                  저를 <span>소개합니다</span>
-                </strong>
-
-                <p
-                  data-aos="fade-right"
-                  data-aos-duration="600"
-                  data-aos-easing="ease-out-cubic"
-                  data-aos-delay="600"
-                  class="aos-init aos-animate"
-                >
-                  안녕하세요! 신입웹퍼블리셔 이성재입니다.
-                  <br />
-                </p>
-
-                <p
-                  data-aos="fade-right"
-                  data-aos-duration="600"
-                  data-aos-easing="ease-out-cubic"
-                  data-aos-delay="600"
-                  class="aos-init aos-animate"
-                >
-                  저는 2023.06.13 ~ 11.13 까지 <br />
-                  UI&UX 디자인, 프론트엔드 과정을 수료하였으며, <br />
-                  수료과정에서 Github를 이용한 팀프로젝트 작업을 <br />
-                  했습니다. 취업을해서도 이경험을 바탕으로 업무를 <br />
-                  잘수행해낼수있습니다.
-                </p>
-              </div>
-
-              <div class="introduce-img">
+            <section class="sec-g about" id="about">
+              <div class="about-img">
                 <a href="https://github.com/Sulhyang">
                   <img
-                    src="./dist/img/bnr1.png"
+                    src="./images/bnr1.png"
                     alt="github_bnr"
                     data-aos="flip-right"
                     data-aos-duration="400"
@@ -340,55 +205,41 @@
                   />
                 </a>
               </div>
-            </section>
 
-            <section class="sec-g business-g sec-increase" id="skill">
-              <h2 class="blind">myskill</h2>
-              <div class="business-tit">
-                <p
-                  data-aos="fade-left"
-                  data-aos-duration="400"
-                  data-aos-easing="ease-out-cubic"
-                  data-aos-delay="300"
-                  data-aos-offset="400"
-                >
-                  My Skill
-                </p>
-                <strong
-                  data-aos="fade-left"
-                  data-aos-duration="500"
-                  data-aos-easing="ease-out-cubic"
-                  data-aos-delay="400"
-                  data-aos-offset="400"
-                  >사용가능 <span>스킬</span>목록</strong
-                >
-              </div>
-
-              <div class="business-item-g">
-                <div class="business-item-txt">
-                  <p class="item-txt">HTML, CSS, SCSS</p>
-                  <a href="#" class="business-link"
-                    ><p>javascript, Bootstrap, nodejs</p></a
-                  >
-
-                  <a href="#" class="business-link"
-                    ><p>Figma, Photoshop, Gnuboard5</p></a
-                  >
-                  <a href="#" class="business-link"
-                    ><p>Github, VScode, Jquery</p></a
-                  >
-                </div>
-
-                <div
-                  class="business-img"
-                  data-aos="fade-up"
-                  data-aos-duration="500"
-                  data-aos-easing="ease-out-cubic"
-                  data-aos-delay="500"
-                  class="aos-init aos-animate"
-                >
-                  <a href="#"><img src="./dist/img/bnr-1.jpg" alt="" /></a>
-                </div>
+              <div class="about-txt">
+                <ul class="about-depth1">
+                  <li>
+                    <h3
+                      data-aos="fade-right"
+                      data-aos-duration="500"
+                      data-aos-easing="ease-out-cubic"
+                      class="aos-init aos-animate about-tit"
+                    >
+                      About me
+                    </h3>
+                    <ul class="about-depth2">
+                      <li>이성재 (INTJ)</li>
+                      <li>2000.03.10</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h3 class="about-tit">EDUCATION</h3>
+                    <ul class="about-depth2">
+                      <li>
+                        <span>2023.06 ~ 2023.11</span> <br />
+                        <span>UI/UX 퍼블리셔&프론트엔드 과정 수료</span>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h3 class="about-tit">SKILL</h3>
+                    <ul class="about-depth2">
+                      <li>HTML, CSS, SCSS, Javascript</li>
+                      <li>Bootstrap, React, Gnuboard5</li>
+                      <li>Figma, Photoshop, Github</li>
+                    </ul>
+                  </li>
+                </ul>
               </div>
             </section>
 

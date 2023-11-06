@@ -1,5 +1,9 @@
 @charset "UFT-8";
-@import "variables", "mixin", "fonts", "reset", "main", "contents";
+@import "variables", "fonts", "reset", "main", "contents";
+body {
+  font-family: "Montserrat";
+  font-weight: 500;
+}
 
 .hero__image {
   width: 100%;
@@ -29,11 +33,24 @@
 #masthead a {
   padding: 1rem 2rem;
 }
-
+#pansels .panel-g::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(-100%);
+  transition: transform 0.4s;
+}
 #panels #panels-container .panel .port-img {
   position: relative;
   width: 600px;
   height: 500px;
+  margin-right: 70px;
   display: block;
   overflow: hidden;
   box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.1);
@@ -66,18 +83,21 @@
   padding-right: 100px;
   color: #333;
   font-weight: normal;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   .port-type {
     opacity: 0.5;
   }
   .port-item {
     opacity: 0.7;
   }
-  .port-cont {
+  .port-txt-tit {
     font-weight: bold;
     font-size: 20px;
   }
   .port-tit {
-    padding-bottom: 50px;
     font-size: 40px;
   }
   .port-item-first {
@@ -147,19 +167,17 @@
   padding: 10px;
   border: 1px solid #000;
   border-radius: 15px;
-  width: 50px;
-  height: 15px;
+  width: 100px;
+  height: 20px;
   background-color: #333;
   color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 // 인트로슬라이드
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap");
-
-body {
-  font-family: "IBM Plex Sans", sans-serif;
-}
-
 .wrap {
   overflow: hidden;
 }
@@ -382,7 +400,7 @@ strong {
   }
 }
 
-.introduce::before {
+.about::before {
   content: "";
   position: absolute;
   top: 0;
@@ -409,31 +427,17 @@ strong {
   border-radius: 60px 0 0 0;
   z-index: -1;
 }
-.introduce {
+.about {
   position: relative;
   display: flex;
-  .introduce-tit {
-    width: 50%;
-    h2 {
-      margin-top: 60px;
-      margin-bottom: 0;
-    }
-    strong {
-      font-size: 60px;
-      span {
-        color: #109421;
-      }
-    }
-    img {
-      display: block;
-      margin-top: 20px;
-    }
-    p {
-      margin-top: 20px;
-      font-size: 22px;
+  .about-txt {
+    padding-top: 10%;
+    .about-tit {
+      margin-top: 30px;
+      margin-bottom: 10px;
     }
   }
-  .introduce-img {
+  .about-img {
     width: 50%;
     img {
       margin-top: 100px;

@@ -46,28 +46,24 @@ tween = gsap.to(panels, {
     end: () => "+=" + (panelsContainer.offsetWidth - innerWidth),
   },
 });
-// 인트로슬라이드
-gsap.registerPlugin(ScrollTrigger);
+//
+//
+//
+//
+//
+//intro matter.js
+$(".cta").click(function () {
+  $(".first-box").addClass("circlebye");
+  $(".name").css("visibility", "hidden");
+  $(".desc").css("visibility", "hidden");
+  $(".cta").css("visibility", "hidden");
+  $(".words__play").addClass("opacityzero");
+  $(".words__design").addClass("opacityzero");
+  $(".words__code").addClass("opacityzero");
+  $(".words__draw").addClass("opacityzero");
 
-gsap.to(".hero", {
-  scrollTrigger: {
-    trigger: ".hero",
-    scrub: true,
-    pin: true,
-    start: "center center",
-    end: "bottom -100%",
-    toggleClass: "active",
-    ease: "power2",
-  },
-});
-
-gsap.to(".hero__image", {
-  scrollTrigger: {
-    trigger: ".hero",
-    scrub: 0.5,
-    start: "top bottom",
-    end: "bottom -300%",
-    ease: "power2",
-  },
-  y: "-30%",
+  $(".top").addClass("top-back");
+  $(".bottom").addClass("bottom-back");
+  $(".left").addClass("left-back");
+  $(".right").addClass("right-back");
 });
